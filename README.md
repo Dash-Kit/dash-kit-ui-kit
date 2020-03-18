@@ -1,14 +1,76 @@
-# uikit
+# Flutter UIKit
 
-UI Kit for any new Flutter project.
+Flutter library for showing all widgets states
 
-## Getting Started
+## Install
+add in your ```pubspec.yaml```:
+```
+flutter_platform_core:
+    git:
+      url: git://github.com/mobile-dualbootpartners/flutter-ui-kit
+      ref: v0.0.1
+```
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+## How to use
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+Create a builder for a custom widget and include in it all the states of the widget that you want to show in the UIKit:
+
+```dart
+class TextUiKitBuilder extends UiKitBuilder {
+  @override
+  Type get componentType => Text;
+
+  @override
+  void buildComponentStates() {
+    build('Black text', const Text('Hello world!'));
+    build(
+      'Grey text',
+      const Text(
+        'Hello world!',
+        style: TextStyle(color: Colors.grey),
+      ),
+    );
+  }
+}
+```
+
+Register groups widgets in the UIKit:
+
+```dart
+void registerWidgetGroups() {
+  UiKit.register(
+    () => [
+      UiComponentGroup('Text widgets', [
+        TextUiKitBuilder(),
+      ]),
+      UiComponentGroup('Button widgets', [
+        FlatButtonUiKitBuilder(),
+      ]),
+    ],
+  );
+}
+```
+
+Use ```registerWidgetGroups()``` in ```main.dart```:
+```dart
+void main() { 
+  registerWidgetGroups();
+  runApp(MyApp());
+}
+```
+
+Use ```UIKitPage()``` in the place you need:
+```dart
+@override
+  Widget build(BuildContext context) {
+    eturn MaterialApp(
+      title: 'UIKit Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: UiKitPage(),
+    );
+  }
+```
+
+You can also see the [example](https://github.com/mobile-dualbootpartners/flutter-ui-kit/tree/master/example) project
