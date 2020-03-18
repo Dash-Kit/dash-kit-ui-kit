@@ -5,7 +5,7 @@ Flutter library for showing all widgets states
 ## Install
 add in your ```pubspec.yaml```:
 ```
-flutter_platform_core:
+flutter_ui_kit:
     git:
       url: git://github.com/mobile-dualbootpartners/flutter-ui-kit
       ref: v0.0.1
