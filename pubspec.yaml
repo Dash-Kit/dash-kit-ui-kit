@@ -2,10 +2,10 @@ name: uikit
 description: UI Kit for any new Flutter project.
 version: 0.0.1
 author:
-homepage:
+homepage: https://github.com/mobile-dualbootpartners/flutter-ui-kit
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.2.2 <3.0.0"
 
 dependencies:
   flutter:

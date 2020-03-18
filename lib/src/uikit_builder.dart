@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-
-class ComponentState {
-  const ComponentState(this.name, this.widget);
-  final String name;
-  final Widget widget;
-}
+import 'package:uikit/src/modals/component_state.dart';
 
 abstract class UiKitBuilder {
   List<ComponentState> _componentStates = [];
