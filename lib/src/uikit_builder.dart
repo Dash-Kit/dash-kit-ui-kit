@@ -3,9 +3,11 @@ import 'package:uikit/src/modals/component_state.dart';
 
 abstract class UiKitBuilder {
   List<ComponentState> _componentStates = [];
-  String get componentGroup;
+
   Type get componentType;
+
   void buildComponentStates();
+
   List<ComponentState> getComponentsStates() {
     _componentStates = [];
     buildComponentStates();

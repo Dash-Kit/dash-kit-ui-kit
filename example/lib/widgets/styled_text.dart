@@ -3,8 +3,6 @@ import 'package:uikit/uikit.dart';
 
 class TextUiKitBuilder extends UiKitBuilder {
   @override
-  String get componentGroup => 'Styled Texts';
-  @override
   Type get componentType => Text;
 
   @override

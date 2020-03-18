@@ -31,10 +31,9 @@ class WidgetStatesModal extends ModalRoute<void> {
     Animation<double> animation,
     Animation<double> secondaryAnimation,
   ) {
-    // This makes sure that text and other content follows the material style
     return Scaffold(
       appBar: AppBar(
-        title: Text(builder.componentGroup),
+        title: Text(builder.componentType.toString()),
         leading: IconButton(
           icon: Icon(Icons.close),
           onPressed: () => Navigator.of(context).pop(),

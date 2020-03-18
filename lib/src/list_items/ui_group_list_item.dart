@@ -34,7 +34,7 @@ class UIGroupListItem extends StatelessWidget {
         color: Colors.white,
         padding: EdgeInsets.all(4),
         child: Text(
-          builder.componentGroup,
+          builder.componentType.toString(),
           style: TextStyle(
             color: Colors.black,
             fontSize: 14,
