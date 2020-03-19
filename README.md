@@ -41,7 +41,7 @@ When you are using UIKit place builders in the files with a name like ``<widget 
 Register groups widgets in the UIKit:
 
 ```dart
-void configurationUIKit() {
+void configureUiKit() {
   UiKit.register(
     () => [
       UiComponentGroup('Text widgets', [
@@ -55,10 +55,10 @@ void configurationUIKit() {
 }
 ```
 
-Use ```configurationUIKit()``` in ```main.dart```:
+Use ```configureUiKit()``` in ```main.dart```:
 ```dart
 void main() { 
-  configurationUIKit();
+  configureUiKit();
   runApp(MyApp());
 }
 ```
