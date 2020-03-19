@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:uikit/src/modals/component_state.dart';
 
 class WidgetStateListItem extends StatelessWidget {
-  const WidgetStateListItem(this.widgetState);
+  const WidgetStateListItem(this.widgetState,
+      {this.componentWithPadding = false});
 
   final ComponentState widgetState;
+  final bool componentWithPadding;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,13 @@ class WidgetStateListItem extends StatelessWidget {
         children: <Widget>[
           _buildTitle(),
           Container(height: 10),
-          widgetState.widget,
+          Container(
+            padding: componentWithPadding
+                ? const EdgeInsets.all(16)
+                : const EdgeInsets.all(0),
+            width: double.infinity,
+            child: widgetState.widget,
+          ),
           Container(height: 10),
           _buildDivider(),
         ],

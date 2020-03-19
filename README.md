@@ -72,5 +72,9 @@ Use ```UIKitPage()``` in the place you need:
     );
   }
 ```
+you can use ```componentWithPadding``` if neaded:
+```dart
+UiKitPage(componentWithPadding: true)
+```
 
 You can also see the [example](https://github.com/mobile-dualbootpartners/flutter-ui-kit/tree/master/example) project

@@ -2,7 +2,7 @@ import 'package:example/widgets/ui_kit/widget_groups.dart';
 import 'package:flutter/material.dart';
 import 'package:uikit/uikit.dart';
 
-void main() { 
+void main() {
   registerWidgetGroups();
   runApp(MyApp());
 }
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: UiKitPage(),
+      home: UiKitPage(componentWithPadding: true),
     );
   }
 }

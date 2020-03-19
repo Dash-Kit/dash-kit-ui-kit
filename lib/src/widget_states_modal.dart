@@ -3,9 +3,10 @@ import 'package:uikit/src/list_items/widget_state_list_item.dart';
 import 'package:uikit/src/uikit_builder.dart';
 
 class WidgetStatesModal extends ModalRoute<void> {
-  WidgetStatesModal(this.builder);
+  WidgetStatesModal(this.builder, {this.componentWithPadding = false});
 
   final UiKitBuilder builder;
+  final bool componentWithPadding;
 
   @override
   Duration get transitionDuration => Duration(milliseconds: 200);
@@ -46,7 +47,12 @@ class WidgetStatesModal extends ModalRoute<void> {
   List<Widget> _buildWidgets() {
     return builder
         .getComponentsStates()
-        .map((item) => WidgetStateListItem(item))
+        .map(
+          (item) => WidgetStateListItem(
+            item,
+            componentWithPadding: componentWithPadding,
+          ),
+        )
         .toList();
   }
 
