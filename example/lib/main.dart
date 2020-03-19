@@ -1,9 +1,9 @@
-import 'package:example/widgets/ui_kit/widget_groups.dart';
+import 'package:example/configuration/uikit.dart';
 import 'package:flutter/material.dart';
 import 'package:uikit/uikit.dart';
 
 void main() {
-  registerWidgetGroups();
+  configurationUIKit();
   runApp(MyApp());
 }
 

@@ -34,10 +34,14 @@ class TextUiKitBuilder extends UiKitBuilder {
 }
 ```
 
+Use style for the file name like ``<widget name>.uikit.dart``, example: ``text.uikit.dart``.
+
+---
+
 Register groups widgets in the UIKit:
 
 ```dart
-void registerWidgetGroups() {
+void configurationUIKit() {
   UiKit.register(
     () => [
       UiComponentGroup('Text widgets', [
@@ -51,13 +55,14 @@ void registerWidgetGroups() {
 }
 ```
 
-Use ```registerWidgetGroups()``` in ```main.dart```:
+Use ```configurationUIKit()``` in ```main.dart```:
 ```dart
 void main() { 
-  registerWidgetGroups();
+  configurationUIKit();
   runApp(MyApp());
 }
 ```
+---
 
 Use ```UIKitPage()``` in the place you need:
 ```dart
