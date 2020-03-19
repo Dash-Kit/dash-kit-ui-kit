@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:uikit/uikit.dart';
 
 void main() {
-  configurationUIKit();
+  configureUiKit();
   runApp(MyApp());
 }
 

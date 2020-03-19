@@ -34,7 +34,7 @@ class TextUiKitBuilder extends UiKitBuilder {
 }
 ```
 
-Use style for the file name like ``<widget name>.uikit.dart``, example: ``text.uikit.dart``.
+When you are using UIKit place builders in the files with a name like ``<widget name>.uikit.dart``, example: ``text.uikit.dart``.
 
 ---
 
