@@ -1,4 +1,4 @@
-library uikit;
+library dash_kit_uikit;
 
 export 'src/uikit.dart';
 export 'src/uikit_page.dart';

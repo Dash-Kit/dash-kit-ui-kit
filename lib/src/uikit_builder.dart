@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uikit/src/modals/component_state.dart';
+import 'package:dash_kit_uikit/src/modals/component_state.dart';
 
 abstract class UiKitBuilder {
   List<ComponentState> _componentStates = [];

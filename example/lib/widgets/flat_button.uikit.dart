@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uikit/uikit.dart';
+import 'package:dash_kit_uikit/dash_kit_uikit.dart';
 
 class FlatButtonUiKitBuilder extends UiKitBuilder {
   @override
