@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:uikit/src/list_items/ui_group_list_item.dart';
-import 'package:uikit/src/uikit.dart';
-import 'package:uikit/src/modals/uikit_component_group.dart';
-import 'package:uikit/src/uikit_builder.dart';
-import 'package:uikit/src/widget_states_modal.dart';
+import 'package:dash_kit_uikit/src/list_items/ui_group_list_item.dart';
+import 'package:dash_kit_uikit/src/uikit.dart';
+import 'package:dash_kit_uikit/src/modals/uikit_component_group.dart';
+import 'package:dash_kit_uikit/src/uikit_builder.dart';
+import 'package:dash_kit_uikit/src/widget_states_modal.dart';
 
 class UiKitPage extends StatelessWidget {
   const UiKitPage({this.componentWithPadding = false});
 
   final bool componentWithPadding;
+
   @override
   Widget build(BuildContext context) {
     final List<UiComponentGroup> groups = UiKit.uiComponentsGroups;

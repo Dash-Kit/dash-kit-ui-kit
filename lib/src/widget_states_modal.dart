@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:uikit/src/list_items/widget_state_list_item.dart';
-import 'package:uikit/src/uikit_builder.dart';
+import 'package:dash_kit_uikit/src/list_items/widget_state_list_item.dart';
+import 'package:dash_kit_uikit/src/uikit_builder.dart';
 
 class WidgetStatesModal extends ModalRoute<void> {
   WidgetStatesModal(this.builder, {this.componentWithPadding = false});

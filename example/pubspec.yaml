@@ -20,7 +20,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  uikit:
+  dash_kit_uikit:
     path: ../
 
   # The following adds the Cupertino Icons font to your application.

@@ -1,4 +1,4 @@
-import 'package:uikit/src/modals/uikit_component_group.dart';
+import 'package:dash_kit_uikit/src/modals/uikit_component_group.dart';
 
 typedef RegisterUiComponentsCallback = List<UiComponentGroup> Function();
 
