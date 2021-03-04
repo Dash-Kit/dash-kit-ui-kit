@@ -4,8 +4,8 @@ import 'package:dash_kit_uikit/src/modals/uikit_component_group.dart';
 
 class UIGroupListItem extends StatelessWidget {
   const UIGroupListItem({
-    @required this.group,
-    @required this.onPressed,
+    required this.group,
+    required this.onPressed,
   });
 
   final Function(UiKitBuilder, BuildContext) onPressed;

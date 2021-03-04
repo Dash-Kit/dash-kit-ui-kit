@@ -1,10 +1,10 @@
 name: dash_kit_uikit
 description: The dash component for creation of your own UI component library.
-version: 1.0.0
+version: 3.0.0-dev.1
 homepage: https://github.com/Dash-Kit/dash-kit-ui-kit
 
 environment:
-  sdk: ">=2.3.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:

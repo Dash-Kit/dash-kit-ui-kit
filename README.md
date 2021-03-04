@@ -2,15 +2,6 @@
 
 Flutter library for showing all widgets states
 
-## Install
-add in your ```pubspec.yaml```:
-```
-uikit:
-    git:
-      url: git://github.com/mobile-dualbootpartners/flutter-ui-kit
-      ref: v0.0.1
-```
-
 ## How to use
 
 Create a builder for a custom widget and include in it all the states of the widget that you want to show in the UIKit:
