@@ -1,9 +1,9 @@
+import 'package:dash_kit_uikit/dash_kit_uikit.dart';
 import 'package:example/configuration/uikit.dart';
 import 'package:flutter/material.dart';
-import 'package:dash_kit_uikit/dash_kit_uikit.dart';
 
 void main() {
-  configureUiKit();
+  registerUiKitWidgetGroups();
   runApp(MyApp());
 }
 
@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      debugShowCheckedModeBanner: false,
       home: UiKitPage(componentWithPadding: true),
     );
   }
