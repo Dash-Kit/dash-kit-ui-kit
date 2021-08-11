@@ -1,4 +1,4 @@
-package com.dualbootpartners.example
+package org.dashkit.uikit.example
 
 import io.flutter.embedding.android.FlutterActivity
 
