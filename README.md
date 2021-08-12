@@ -1,53 +1,66 @@
 # Flutter UIKit
 
-Flutter library for showing all widgets states
+A Flutter plugin to demonstrate the set of widgets created for an app with available widget states. This plugin may be used either for widget testing or to for getting acquainted with widgets used in project.
+
+<img src="readme_images/1.png" alt="drawing" width="250"/> &nbsp;
+<img src="readme_images/2.png" alt="drawing" width="250"/> <br />
+
 
 ## Install
-add in your ```pubspec.yaml```:
-```
-uikit:
-    git:
-      url: git://github.com/mobile-dualbootpartners/flutter-ui-kit
-      ref: v0.0.1
-```
 
-## How to use
+To use this plugin, add ```dash_kit_uikit ``` as a [dependency in your pubspec.yaml file](https://flutter.dev/docs/development/packages-and-plugins/using-packages). 
 
-Create a builder for a custom widget and include in it all the states of the widget that you want to show in the UIKit:
+
+## Getting Started
+
+Create or use existing widgets required for your app and create UiKitBuilder classes  that will contain all required states for each individual widget.
 
 ```dart
-class TextUiKitBuilder extends UiKitBuilder {
+class PrimaryButtonUiKitBuilder extends UiKitBuilder {
   @override
-  Type get componentType => Text;
+  Type get componentType => PrimaryButton;
 
   @override
   void buildComponentStates() {
-    build('Black text', const Text('Hello world!'));
     build(
-      'Grey text',
-      const Text(
-        'Hello world!',
-        style: TextStyle(color: Colors.grey),
+      'Enabled Primary Button',
+      Center(
+        child: PrimaryButton(
+          text: 'Enabled Primary Button',
+          onPressed: () {},
+          expanded: false,
+        ),
+      ),
+    );
+    build(
+      'Disabled Primary Button',
+      const PrimaryButton(text: 'Disabled Primary Button'),
+    );
+    build(
+      'Expanded Primary Button',
+      PrimaryButton(
+        text: 'Enabled Primary Button',
+        onPressed: () {},
+        expanded: true,
       ),
     );
   }
 }
 ```
 
-When you are using UIKit place builders in the files with a name like ``<widget name>.uikit.dart``, example: ``text.uikit.dart``.
-
 ---
 
-Register groups widgets in the UIKit:
+Create UiKitPage configurator, using ``UiKit.register method``. This function should contain list of UiComponentGroup elements for each individual group of widgets (buttons, input fields, etc.). Each component group receives the string for the group name and list of UiKitBuilder elements for each required widget.
 
 ```dart
-void configureUiKit() {
+void registerUiKitWidgetGroups() {
   UiKit.register(
     () => [
       UiComponentGroup('Text widgets', [
         TextUiKitBuilder(),
       ]),
       UiComponentGroup('Button widgets', [
+        PrimaryButtonUiKitBuilder(),
         FlatButtonUiKitBuilder(),
       ]),
     ],
@@ -55,16 +68,21 @@ void configureUiKit() {
 }
 ```
 
-Use ```configureUiKit()``` in ```main.dart```:
+---
+
+Configure set of required widgets by registering widget groups in ```main.dart```:
+
 ```dart
-void main() { 
-  configureUiKit();
+void main() {
+  registerUiKitWidgetGroups();
   runApp(MyApp());
 }
 ```
+
 ---
 
-Use ```UIKitPage()``` in the place you need:
+Place UiKitPage to required place:
+
 ```dart
 @override
   Widget build(BuildContext context) {
@@ -77,9 +95,13 @@ Use ```UIKitPage()``` in the place you need:
     );
   }
 ```
-you can use ```componentWithPadding``` if neaded:
+
+You can use componentWithPadding if neaded:
+
 ```dart
 UiKitPage(componentWithPadding: true)
 ```
 
-You can also see the [example](https://github.com/mobile-dualbootpartners/flutter-ui-kit/tree/master/example) project
+---
+
+You can also check the [example project](https://github.com/Dash-Kit/dash-kit-ui-kit/tree/master/example).
