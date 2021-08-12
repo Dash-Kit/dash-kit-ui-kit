@@ -3,13 +3,10 @@ import 'package:dash_kit_uikit/src/modals/uikit_component_group.dart';
 typedef RegisterUiComponentsCallback = List<UiComponentGroup> Function();
 
 abstract class UiKit {
-  static RegisterUiComponentsCallback? _registrationCallback;
+  static late RegisterUiComponentsCallback _registrationCallback;
 
-  static List<UiComponentGroup> get uiComponentsGroups {
-    final builders = _registrationCallback?.call() ?? [];
-
-    return builders;
-  }
+  static List<UiComponentGroup>? get uiComponentsGroups =>
+      _registrationCallback();
 
   static void register(RegisterUiComponentsCallback registrationCallback) {
     _registrationCallback = registrationCallback;

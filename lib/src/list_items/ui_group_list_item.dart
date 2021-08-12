@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:dash_kit_uikit/src/uikit_builder.dart';
 import 'package:dash_kit_uikit/src/modals/uikit_component_group.dart';
+import 'package:dash_kit_uikit/src/uikit_builder.dart';
+import 'package:flutter/material.dart';
 
 class UIGroupListItem extends StatelessWidget {
   const UIGroupListItem({
@@ -33,10 +33,12 @@ class UIGroupListItem extends StatelessWidget {
   Widget _buildUIBuilder(UiKitBuilder builder, BuildContext context) {
     return Container(
       width: double.infinity,
-      child: RaisedButton(
-        elevation: 0,
-        color: Colors.white,
-        padding: EdgeInsets.all(4),
+      child: TextButton(
+        onPressed: () => onPressed(builder, context),
+        style: TextButton.styleFrom(
+          padding: EdgeInsets.all(4.0),
+          backgroundColor: Colors.white,
+        ),
         child: Text(
           builder.componentType.toString(),
           style: TextStyle(
@@ -44,7 +46,6 @@ class UIGroupListItem extends StatelessWidget {
             fontSize: 14,
           ),
         ),
-        onPressed: () => onPressed(builder, context),
       ),
     );
   }
