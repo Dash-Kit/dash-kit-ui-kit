@@ -1,5 +1,5 @@
 name: dash_kit_uikit
-description: The dash component for creation of your own UI component library.
+description: A Flutter plugin to demonstrate the set of widgets created for an app with available widget states. This plugin may be used either for widget testing or to for getting acquainted with widgets used in project.
 version: 3.0.0-dev.1
 homepage: https://github.com/Dash-Kit/dash-kit-ui-kit
 
