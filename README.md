@@ -2,8 +2,8 @@
 
 A Flutter plugin to demonstrate the set of widgets created for an app with available widget states. This plugin may be used either for widget testing or to for getting acquainted with widgets used in project.
 
-<img src="readme_images/1.png" alt="drawing" width="250"/> &nbsp;
-<img src="readme_images/2.png" alt="drawing" width="250"/> <br />
+<img src="https://github.com/Dash-Kit/dash-kit-ui-kit/blob/master/readme_images/1.png" alt="drawing" width="250"/> &nbsp;
+<img src="https://github.com/Dash-Kit/dash-kit-ui-kit/blob/master/readme_images/2.png" alt="drawing" width="250"/> <br />
 
 
 ## Install
