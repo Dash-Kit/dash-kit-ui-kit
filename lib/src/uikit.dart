@@ -8,6 +8,8 @@ abstract class UiKit {
   static List<UiComponentGroup>? get uiComponentsGroups =>
       _registrationCallback();
 
+  /// Registration group of elements.
+  /// Callback should return the list of UiComponentGroup instances.
   static void register(RegisterUiComponentsCallback registrationCallback) {
     _registrationCallback = registrationCallback;
   }
