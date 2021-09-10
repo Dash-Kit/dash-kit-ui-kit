@@ -1,6 +1,10 @@
-import 'package:flutter/material.dart';
 import 'package:dash_kit_uikit/src/modals/component_state.dart';
+import 'package:flutter/material.dart';
 
+/// UiKitBuilder class - abstract class for creating classes
+/// that will be joined in UiComponentGroup instance.
+/// - componentType getter should return the type of presented Widget
+/// - build method should return an example Widget
 abstract class UiKitBuilder {
   List<ComponentState> _componentStates = [];
 
