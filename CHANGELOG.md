@@ -1,5 +1,5 @@
 ## [3.1.0]
-- Incremented the Slutter SDK version to 3.7.0
+- Incremented the Flutter SDK version to 3.7.0
 
 ## [3.0.1]
 
