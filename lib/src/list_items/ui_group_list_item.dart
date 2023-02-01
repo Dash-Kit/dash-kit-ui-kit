@@ -2,11 +2,13 @@ import 'package:dash_kit_uikit/src/modals/uikit_component_group.dart';
 import 'package:dash_kit_uikit/src/uikit_builder.dart';
 import 'package:flutter/material.dart';
 
+// ignore_for_file: avoid-returning-widgets
 class UIGroupListItem extends StatelessWidget {
   const UIGroupListItem({
     required this.group,
     required this.onPressed,
-  });
+    Key? key,
+  }) : super(key: key);
 
   final Function(UiKitBuilder, BuildContext) onPressed;
 
@@ -31,17 +33,17 @@ class UIGroupListItem extends StatelessWidget {
   }
 
   Widget _buildUIBuilder(UiKitBuilder builder, BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: TextButton(
         onPressed: () => onPressed(builder, context),
         style: TextButton.styleFrom(
-          padding: EdgeInsets.all(4.0),
+          padding: const EdgeInsets.all(4),
           backgroundColor: Colors.white,
         ),
         child: Text(
           builder.componentType.toString(),
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.black,
             fontSize: 14,
           ),

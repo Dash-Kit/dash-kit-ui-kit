@@ -33,7 +33,7 @@ class PrimaryButton extends StatelessWidget {
             style: TextButton.styleFrom(
               padding: padding,
               backgroundColor: color,
-              primary: splashColor,
+              foregroundColor: splashColor,
               shape: shape as OutlinedBorder? ??
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5.0),
