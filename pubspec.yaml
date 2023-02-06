@@ -1,6 +1,6 @@
 name: dash_kit_uikit
 description: A Flutter plugin to demonstrate the set of common widgets used in APP (for dev introduction and testing)
-version: 3.1.0
+version: 3.2.0
 homepage: https://github.com/Dash-Kit/dash-kit-ui-kit
 
 environment:
@@ -13,5 +13,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  dash_kit_lints: ^1.0.1
 
 flutter:

@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:dash_kit_uikit/src/list_items/widget_state_list_item.dart';
 import 'package:dash_kit_uikit/src/uikit_builder.dart';
+import 'package:flutter/material.dart';
 
 class WidgetStatesModal extends ModalRoute<void> {
   WidgetStatesModal(this.builder, {this.componentWithPadding = false});
@@ -9,7 +9,7 @@ class WidgetStatesModal extends ModalRoute<void> {
   final bool componentWithPadding;
 
   @override
-  Duration get transitionDuration => Duration(milliseconds: 200);
+  Duration get transitionDuration => const Duration(milliseconds: 200);
 
   @override
   bool get opaque => false;
@@ -36,11 +36,29 @@ class WidgetStatesModal extends ModalRoute<void> {
       appBar: AppBar(
         title: Text(builder.componentType.toString()),
         leading: IconButton(
-          icon: Icon(Icons.close),
+          icon: const Icon(Icons.close),
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
       body: ListView(shrinkWrap: true, children: _buildWidgets()),
+    );
+  }
+
+  @override
+  Widget buildTransitions(
+    BuildContext context,
+    Animation<double> animation,
+    Animation<double> secondaryAnimation,
+    Widget child,
+  ) {
+    const begin = Offset(0, 1);
+    const end = Offset.zero;
+    final tween = Tween(begin: begin, end: end);
+    final offsetAnimation = animation.drive(tween);
+
+    return SlideTransition(
+      position: offsetAnimation,
+      child: child,
     );
   }
 
@@ -54,19 +72,5 @@ class WidgetStatesModal extends ModalRoute<void> {
           ),
         )
         .toList();
-  }
-
-  @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation, Widget child) {
-    var begin = Offset(0.0, 1.0);
-    var end = Offset.zero;
-    var tween = Tween(begin: begin, end: end);
-    var offsetAnimation = animation.drive(tween);
-
-    return SlideTransition(
-      position: offsetAnimation,
-      child: child,
-    );
   }
 }

@@ -5,16 +5,20 @@ import 'package:dash_kit_uikit/src/widget_states_modal.dart';
 import 'package:flutter/material.dart';
 
 class UiKitPage extends StatelessWidget {
-  const UiKitPage({this.componentWithPadding = false});
+  const UiKitPage({
+    this.componentWithPadding = false,
+    Key? key,
+  }) : super(key: key);
 
   final bool componentWithPadding;
 
   @override
   Widget build(BuildContext context) {
     final componentGroups = UiKit.uiComponentsGroups ?? [];
+
     return Scaffold(
       appBar: AppBar(
-        title: Text('UIKit'),
+        title: const Text('UIKit'),
       ),
       body: ListView(
         children: <Widget>[

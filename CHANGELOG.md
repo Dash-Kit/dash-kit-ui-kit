@@ -1,3 +1,6 @@
+## [3.2.0]
+- Added the `dash_kit_lints`
+- Fixed lint issues
 ## [3.1.0]
 - Incremented the Flutter SDK version to 3.7.0
 
