@@ -1,3 +1,6 @@
+## [3.3.0]
+- Upgrade Android example project to target SDK 34
+
 ## [3.2.1]
 - Added test workflow
 
